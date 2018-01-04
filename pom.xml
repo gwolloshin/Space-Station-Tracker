@@ -1,0 +1,58 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.babcock</groupId>
+  <artifactId>garry-ISS-parent</artifactId>
+  <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ISS-model</module>
+        <module>ISS-service</module>
+        <module>ISS-webapp</module>
+        <module>ISS-webapp-acceptance-test</module>
+    </modules>
+
+  <packaging>pom</packaging>
+
+  <name>garry-ISS-parent</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <hibernate.core.version>4.1.1.Final</hibernate.core.version>
+      <hibernate.validator.version>4.2.0.Final</hibernate.validator.version>
+
+      <database.url>jdbc:oracle:thin:@DEV-BDCBEMTR05.blue01.babcockgroup.co.uk:1521:fdms</database.url>
+      <database.username>issgarry</database.username>
+      <database.password>issgarry</database.password>
+
+      <surefire.version>2.19</surefire.version>
+      <skipTests>false</skipTests>
+
+      <skipJbossDeployment>false</skipJbossDeployment>
+
+      <vbridge.server.group>${developer.jboss.domain.server.group}</vbridge.server.group>
+      <jboss-as.hostname>localhost</jboss-as.hostname>
+      <jboss-as.username>admin</jboss-as.username>
+      <jboss-as.password>password</jboss-as.password>
+  </properties>
+
+    <build>
+        <plugins>
+
+        </plugins>
+    </build>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+                <scope>provided</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
